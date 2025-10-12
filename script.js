@@ -1,5 +1,5 @@
 // Configuration - Replace this with your Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwf0b5ZN4pwjciqa2q2WokUTFROkulj2Bun2ZaSaUO9e48ax6t7BWF0kVeCBCvuop49/exec';
 
 // Get form elements
 const form = document.getElementById('signupForm');
