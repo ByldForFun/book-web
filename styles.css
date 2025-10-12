@@ -1,0 +1,457 @@
+:root {
+    /* Beige-Brown Color Palette */
+    --primary-beige: #F5E6D3;
+    --secondary-beige: #E8D5C4;
+    --warm-brown: #A0826D;
+    --dark-brown: #6B5D54;
+    --deep-brown: #4A3F37;
+    
+    /* Pastel Accents */
+    --pastel-pink: #F5D4D4;
+    --pastel-blue: #D4E4F5;
+    --pastel-green: #D4F5E4;
+    --pastel-peach: #FFDAB9;
+    --pastel-lavender: #E6D4F5;
+    
+    /* Neutrals */
+    --white: #FFFFFF;
+    --off-white: #FDFBF7;
+    --light-gray: #F0EBE3;
+    --text-primary: #3D3229;
+    --text-secondary: #7D6E63;
+    
+    /* Fonts */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(107, 93, 84, 0.08);
+    --shadow-md: 0 4px 16px rgba(107, 93, 84, 0.12);
+    --shadow-lg: 0 8px 24px rgba(107, 93, 84, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--primary-beige) 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.hero {
+    text-align: center;
+    padding: 2rem 0 3rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--dark-brown);
+}
+
+.logo svg {
+    color: var(--warm-brown);
+}
+
+.logo h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--deep-brown);
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+    margin: 3rem 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left Section */
+.left-section {
+    padding: 2rem 0;
+}
+
+.main-heading {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--deep-brown);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.feature-icon {
+    background: var(--white);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+    color: var(--warm-brown);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--pastel-peach) 0%, var(--pastel-pink) 100%);
+}
+
+.feature-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.feature-text p {
+    color: var(--text-secondary);
+    font-size: 0.975rem;
+}
+
+/* Right Section - Signup Card */
+.right-section {
+    position: sticky;
+    top: 2rem;
+}
+
+.signup-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--secondary-beige);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--deep-brown);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.card-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Form Styles */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.form-group input {
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background: var(--off-white);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--warm-brown);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(160, 130, 109, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
+    padding: 1.125rem 2rem;
+    background: linear-gradient(135deg, var(--warm-brown) 0%, var(--dark-brown) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-text {
+    display: inline-block;
+}
+
+.btn-loader {
+    display: none;
+}
+
+.submit-btn.loading .btn-text {
+    display: none;
+}
+
+.submit-btn.loading .btn-loader {
+    display: inline-block;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--white);
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: var(--pastel-green);
+    color: #2d5f3f;
+    border: 1px solid #a8d5ba;
+}
+
+.form-message.error {
+    display: block;
+    background: var(--pastel-pink);
+    color: #8b3a3a;
+    border: 1px solid #f5a3a3;
+}
+
+.privacy-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(160, 130, 109, 0.15);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-email {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--white);
+    border-radius: 10px;
+    color: var(--warm-brown);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--deep-brown);
+    background: linear-gradient(135deg, var(--pastel-peach) 0%, var(--pastel-pink) 100%);
+}
+
+.social-links a:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        gap: 3rem;
+    }
+    
+    .main-heading {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .signup-card {
+        padding: 2rem;
+        position: static;
+    }
+    
+    .right-section {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+    
+    .signup-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 0.75rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-links svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
