@@ -3,165 +3,648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookTrack - Share Books, Read Together</title>
+    <title>BookCircle - Read Together, Share Better</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <div class="hero-content">
-                <div class="logo">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <svg width="28" height="28" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
                         <circle cx="35" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
                         <path d="M15 28 Q25 35, 35 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                         <path d="M18 18 L12 18 M32 18 L38 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <circle cx="25" cy="42" r="4" fill="currentColor"/>
                     </svg>
-                    <h1>BookTrack</h1>
                 </div>
-                <p class="tagline">Share books, connect with friends, read together</p>
-            </div>
-        </header>
+                <span>BookCircle</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#themes">Themes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-        <main class="main-content">
-            <div class="content-grid">
-                <div class="left-section">
-                    <h2 class="main-heading">Read Together,<br>Share Better</h2>
-                    <p class="description">
-                        See what your friends are reading in real-time. Recommend books you love, get instant 
-                        suggestions from people you trust, and turn reading into a shared experience.
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Currently in development
+            </div>
+            <h1 class="hero-heading reveal">
+                Reading is better<br><em>together</em>
+            </h1>
+            <p class="hero-subtitle reveal">
+                Track your books, gather around Campfires with friends, discover your next read through people you trust — not algorithms.
+            </p>
+            <div class="hero-buttons reveal">
+                <a href="#waitlist" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 8V20.993A1 1 0 0120.007 22H3.993A.993.993 0 013 20.993V3.007C3 2.45 3.449 2 4.002 2h10.995L21 8zm-2 1h-5V4H5v16h14V9zM8 7h3v2H8V7zm0 4h8v2H8v-2zm0 4h8v2H8v-2z" fill="currentColor"/></svg>
+                    Join the Waitlist
+                </a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">500+</span>
+                    <span class="hero-stat-label">Readers waiting</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">5</span>
+                    <span class="hero-stat-label">Core features</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">3</span>
+                    <span class="hero-stat-label">Beautiful themes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+        <div class="section-container">
+            <div class="section-label reveal">Features</div>
+            <h2 class="section-heading reveal">Everything you need for<br>your reading life</h2>
+            <p class="section-subheading reveal">From tracking your progress to discovering readers who share your taste — BookCircle makes reading social, personal, and fun.</p>
+
+            <!-- Feature: Library -->
+            <div class="feature-showcase reveal">
+                <div class="feature-showcase-content">
+                    <div class="feature-pill" style="--pill-bg: var(--reading); --pill-bg-light: var(--reading-light);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 3h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v14h14V5H5zm2 2h4v4H7V7zm6 0h4v2h-4V7zm0 4h4v2h-4v-2zM7 13h10v2H7v-2z" fill="currentColor"/></svg>
+                        Your Library
+                    </div>
+                    <h3>Your entire bookshelf,<br>beautifully organized</h3>
+                    <p>Track what you're reading, what you want to read, and what you've finished. See your progress at a glance with visual progress bars, reading stats, and personal milestones.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--reading);"></span>
+                            Currently Reading — with page-level progress tracking
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--want);"></span>
+                            Want to Read — your personal wishlist
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--finished);"></span>
+                            Finished — completed books with ratings
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-showcase-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="mock-library">
+                                <div class="mock-header">
+                                    <span class="mock-greeting">Good evening</span>
+                                    <div class="mock-bell"></div>
+                                </div>
+                                <div class="mock-stats-row">
+                                    <div class="mock-stat" style="--stat-color: var(--reading);">
+                                        <div class="mock-stat-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 4H7a2 2 0 100 4h14v12a2 2 0 01-2 2H7a4 4 0 01-4-4V6a4 4 0 014-4h12a2 2 0 012 2z"/></svg>
+                                        </div>
+                                        <span class="mock-stat-num">3</span>
+                                        <span class="mock-stat-label">Reading</span>
+                                    </div>
+                                    <div class="mock-stat" style="--stat-color: var(--want);">
+                                        <div class="mock-stat-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1z"/></svg>
+                                        </div>
+                                        <span class="mock-stat-num">12</span>
+                                        <span class="mock-stat-label">Want to Read</span>
+                                    </div>
+                                    <div class="mock-stat" style="--stat-color: var(--finished);">
+                                        <div class="mock-stat-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.9 12l-1.4-1.4L7.1 12 9.9 14.8l7.1-7.1-1.4-1.4-5.7 5.7zM12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+                                        </div>
+                                        <span class="mock-stat-num">27</span>
+                                        <span class="mock-stat-label">Finished</span>
+                                    </div>
+                                </div>
+                                <div class="mock-section-title">Currently Reading</div>
+                                <div class="mock-book-card">
+                                    <div class="mock-book-cover" style="background: linear-gradient(135deg, #D4836B, #9C8575);"></div>
+                                    <div class="mock-book-info">
+                                        <span class="mock-book-title">The Great Gatsby</span>
+                                        <span class="mock-book-author">F. Scott Fitzgerald</span>
+                                        <div class="mock-progress-bar">
+                                            <div class="mock-progress-fill" style="width: 64%;"></div>
+                                        </div>
+                                        <span class="mock-progress-text">64%</span>
+                                    </div>
+                                </div>
+                                <div class="mock-book-card">
+                                    <div class="mock-book-cover" style="background: linear-gradient(135deg, #7EBD8F, #5D6D7E);"></div>
+                                    <div class="mock-book-info">
+                                        <span class="mock-book-title">Sapiens</span>
+                                        <span class="mock-book-author">Yuval Noah Harari</span>
+                                        <div class="mock-progress-bar">
+                                            <div class="mock-progress-fill" style="width: 28%;"></div>
+                                        </div>
+                                        <span class="mock-progress-text">28%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature: Campfires -->
+            <div class="feature-showcase reverse reveal">
+                <div class="feature-showcase-content">
+                    <div class="feature-pill" style="--pill-bg: var(--accent); --pill-bg-light: var(--accent-light);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 23a7.5 7.5 0 01-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.5.024.652.047 1.312-.5 2.5-.828 1.667-1.667 3.333-3.5 4.5A7.482 7.482 0 0112 23z" fill="currentColor"/></svg>
+                        Campfires
+                    </div>
+                    <h3>Read together around<br>a Campfire</h3>
+                    <p>Campfires are group reading sessions where everyone reads the same book. Share notes pinned to specific pages, vote on discussion topics with polls, and chat in real-time — all with built-in spoiler protection.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--accent);"></span>
+                            Page-pinned notes with spoiler gates
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--accent);"></span>
+                            Group polls for discussion topics
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--accent);"></span>
+                            Real-time group chat
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--accent);"></span>
+                            Visual reading trail — see everyone's progress
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-showcase-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="mock-campfire">
+                                <div class="mock-campfire-header">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 23a7.5 7.5 0 01-5.138-12.963C8.204 8.774 11.5 6.5 11 1.5c6 4 9 8 3 14 1 0 2.5 0 5-2.5.024.652.047 1.312-.5 2.5-.828 1.667-1.667 3.333-3.5 4.5A7.482 7.482 0 0112 23z"/></svg>
+                                    <span>Dune Book Club</span>
+                                </div>
+                                <div class="mock-invite-code">
+                                    <span class="mock-invite-label">Invite Code</span>
+                                    <span class="mock-invite-value">DUNE-4X7K</span>
+                                </div>
+                                <div class="mock-avatars-row">
+                                    <div class="mock-avatar" style="background: var(--accent);">S</div>
+                                    <div class="mock-avatar" style="background: var(--reading); margin-left: -8px;">M</div>
+                                    <div class="mock-avatar" style="background: var(--finished); margin-left: -8px;">A</div>
+                                    <div class="mock-avatar-more" style="margin-left: -8px;">+2</div>
+                                </div>
+                                <div class="mock-trail">
+                                    <div class="mock-trail-bar">
+                                        <div class="mock-trail-fill" style="width: 72%; background: var(--accent);"></div>
+                                    </div>
+                                    <div class="mock-trail-bar">
+                                        <div class="mock-trail-fill" style="width: 45%; background: var(--reading);"></div>
+                                    </div>
+                                    <div class="mock-trail-bar">
+                                        <div class="mock-trail-fill" style="width: 31%; background: var(--finished);"></div>
+                                    </div>
+                                </div>
+                                <div class="mock-note-card">
+                                    <div class="mock-note-header">
+                                        <div class="mock-avatar-sm" style="background: var(--accent);">S</div>
+                                        <span>Sarah &middot; Page 142</span>
+                                    </div>
+                                    <p class="mock-note-text">The world-building in this chapter is absolutely incredible. The way Herbert describes...</p>
+                                    <div class="mock-reactions">
+                                        <span class="mock-reaction">&#128293; 3</span>
+                                        <span class="mock-reaction">&#129327; 1</span>
+                                    </div>
+                                </div>
+                                <div class="mock-note-card spoiler">
+                                    <div class="mock-spoiler-gate">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 10h1a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V11a1 1 0 011-1h1V9a7 7 0 1114 0v1zm-2 0V9A5 5 0 007 9v1h10zm-6 4v4h2v-4h-2z"/></svg>
+                                        Read to page 210 to unlock
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature: Matchmaker -->
+            <div class="feature-showcase reveal">
+                <div class="feature-showcase-content">
+                    <div class="feature-pill" style="--pill-bg: var(--reading); --pill-bg-light: rgba(126, 189, 143, 0.15);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" fill="currentColor"/><path d="M9.5 8.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm5 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 18c3.28 0 6-2.57 6-5h-2c0 1.65-1.79 3-4 3s-4-1.35-4-3H6c0 2.43 2.72 5 6 5z" fill="currentColor"/></svg>
+                        Reader Matchmaker
+                    </div>
+                    <h3>Find readers who<br>share your taste</h3>
+                    <p>Swipe through reader profiles matched by your reading history. When you both swipe right, it's a match — start chatting and recommending books to each other.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--reading);"></span>
+                            Match percentage based on shared books
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--reading);"></span>
+                            Swipe to like or pass on readers
+                        </li>
+                        <li>
+                            <span class="feature-list-dot" style="background: var(--reading);"></span>
+                            Direct chat with your matches
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-showcase-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="mock-matchmaker">
+                                <div class="mock-match-card">
+                                    <div class="mock-match-avatar" style="background: linear-gradient(135deg, var(--accent), var(--primary));">
+                                        <span>J</span>
+                                    </div>
+                                    <span class="mock-match-name">Jamie Rivera</span>
+                                    <span class="mock-match-user">@jamiereads</span>
+                                    <div class="mock-match-stats">
+                                        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="var(--reading)"><path d="M21 4H7a2 2 0 100 4h14v12a2 2 0 01-2 2H7a4 4 0 01-4-4V6a4 4 0 014-4h12a2 2 0 012 2z"/></svg> 8</span>
+                                        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="var(--finished)"><path d="M9.9 12l-1.4-1.4L7.1 12 9.9 14.8l7.1-7.1-1.4-1.4-5.7 5.7zM12 2a10 10 0 100 20 10 10 0 000-20z"/></svg> 42</span>
+                                        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="var(--want)"><path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1z"/></svg> 15</span>
+                                    </div>
+                                    <div class="mock-match-shared">12 books in common</div>
+                                    <div class="mock-match-badge">87% match</div>
+                                </div>
+                                <div class="mock-match-actions">
+                                    <div class="mock-match-btn reject">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.586l4.95-4.95 1.414 1.414L13.414 12l4.95 4.95-1.414 1.414L12 13.414l-4.95 4.95-1.414-1.414L10.586 12 5.636 7.05l1.414-1.414L12 10.586z"/></svg>
+                                    </div>
+                                    <div class="mock-match-btn accept">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="section more-features-section">
+        <div class="section-container">
+            <div class="section-label reveal">And more</div>
+            <h2 class="section-heading reveal">Built for readers,<br>by readers</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(126, 189, 143, 0.15); color: var(--reading);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 6a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2zm0 6a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2z"/></svg>
+                    </div>
+                    <h3>Barcode Scanner</h3>
+                    <p>Point your camera at any book's barcode to instantly add it to your library. No typing required.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(212, 131, 107, 0.15); color: var(--accent);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track by percentage, pages, or chapters. Add notes to your progress entries and see your reading history.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(168, 147, 196, 0.15); color: var(--finished);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </div>
+                    <h3>Real-time Notifications</h3>
+                    <p>Get notified when friends post campfire notes, when you get a reader match, or when someone invites you.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(232, 196, 104, 0.15); color: var(--want);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+                    </div>
+                    <h3>Direct Messages</h3>
+                    <p>Chat one-on-one with your reader matches or group chat inside Campfires. All in real-time.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(156, 133, 117, 0.15); color: var(--primary);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2a7.2 7.2 0 01-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 01-6 3.22z"/></svg>
+                    </div>
+                    <h3>Friend System</h3>
+                    <p>Send friend requests, see their activity feed, and keep up with what your circle is reading.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card-icon" style="background: rgba(126, 189, 143, 0.15); color: var(--reading);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <h3>Book Search</h3>
+                    <p>Search millions of books via Google Books. View details, descriptions, ratings, and add to your library instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works-section" id="how-it-works">
+        <div class="section-container">
+            <div class="section-label reveal">Getting started</div>
+            <h2 class="section-heading reveal">Up and running<br>in three steps</h2>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Create your profile</h3>
+                    <p>Sign up, pick a username, and set your avatar. Your reading journey starts here.</p>
+                </div>
+                <div class="step-connector reveal">
+                    <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <h3>Build your library</h3>
+                    <p>Search for books or scan barcodes. Organize them as Reading, Want to Read, or Finished.</p>
+                </div>
+                <div class="step-connector reveal">
+                    <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <h3>Connect & share</h3>
+                    <p>Add friends, join Campfires, and discover readers through the Matchmaker. Reading is social now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section class="section themes-section" id="themes">
+        <div class="section-container">
+            <div class="section-label reveal">Personalization</div>
+            <h2 class="section-heading reveal">Three cozy themes<br>to match your mood</h2>
+            <p class="section-subheading reveal">Switch between themes anytime from your profile. Each one transforms the entire app experience.</p>
+            <div class="themes-grid">
+                <div class="theme-card reveal" style="--theme-primary: #9C8575; --theme-accent: #D4836B; --theme-bg: #F7F4F0; --theme-surface: #FFFFFF; --theme-text: #2D2926;">
+                    <div class="theme-preview">
+                        <div class="theme-preview-bar" style="background: var(--theme-primary);"></div>
+                        <div class="theme-preview-dots">
+                            <span style="background: var(--theme-primary);"></span>
+                            <span style="background: var(--theme-accent);"></span>
+                            <span style="background: #7EBD8F;"></span>
+                        </div>
+                        <div class="theme-preview-lines">
+                            <div style="width: 70%; background: var(--theme-text); opacity: 0.15;"></div>
+                            <div style="width: 50%; background: var(--theme-text); opacity: 0.1;"></div>
+                        </div>
+                    </div>
+                    <h3>Library Fireplace</h3>
+                    <p>Warm latte tones with terracotta accents. Like reading by the fire.</p>
+                </div>
+                <div class="theme-card reveal" style="--theme-primary: #5D6D7E; --theme-accent: #7FB3D5; --theme-bg: #F0F3F5; --theme-surface: #FFFFFF; --theme-text: #2D3436;">
+                    <div class="theme-preview">
+                        <div class="theme-preview-bar" style="background: var(--theme-primary);"></div>
+                        <div class="theme-preview-dots">
+                            <span style="background: var(--theme-primary);"></span>
+                            <span style="background: var(--theme-accent);"></span>
+                            <span style="background: #7EBD8F;"></span>
+                        </div>
+                        <div class="theme-preview-lines">
+                            <div style="width: 70%; background: var(--theme-text); opacity: 0.15;"></div>
+                            <div style="width: 50%; background: var(--theme-text); opacity: 0.1;"></div>
+                        </div>
+                    </div>
+                    <h3>Rainy Cafe</h3>
+                    <p>Cool blue-grey palette. Calm and serene, like a quiet coffee shop.</p>
+                </div>
+                <div class="theme-card reveal" style="--theme-primary: #6B8E50; --theme-accent: #D4836B; --theme-bg: #F4F7F0; --theme-surface: #FFFFFF; --theme-text: #2D3329;">
+                    <div class="theme-preview">
+                        <div class="theme-preview-bar" style="background: var(--theme-primary);"></div>
+                        <div class="theme-preview-dots">
+                            <span style="background: var(--theme-primary);"></span>
+                            <span style="background: var(--theme-accent);"></span>
+                            <span style="background: #7EBD8F;"></span>
+                        </div>
+                        <div class="theme-preview-lines">
+                            <div style="width: 70%; background: var(--theme-text); opacity: 0.15;"></div>
+                            <div style="width: 50%; background: var(--theme-text); opacity: 0.1;"></div>
+                        </div>
+                    </div>
+                    <h3>Morning Garden</h3>
+                    <p>Fresh olive greens with nature tones. Botanical and bright.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Mission Section -->
+    <section class="section about-section" id="about">
+        <div class="section-container">
+            <div class="about-card reveal">
+                <div class="section-label">Our story</div>
+                <h2 class="section-heading">Why we're building BookCircle</h2>
+                <div class="about-content">
+                    <p>The best book recommendations don't come from algorithms — they come from people you know and trust. A friend texting "you HAVE to read this" carries more weight than any bestseller list.</p>
+                    <p>BookCircle was built to make that experience effortless. We wanted a place where you can see what your friends are reading right now, gather around a book together in Campfires, and discover readers who share your exact taste through the Matchmaker.</p>
+                    <p>Reading has always been personal. We're just making it a little more connected.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Signup Section -->
+    <section class="section waitlist-section" id="waitlist">
+        <div class="section-container">
+            <div class="waitlist-wrapper reveal">
+                <div class="waitlist-content">
+                    <div class="section-label">Early access</div>
+                    <h2 class="waitlist-heading">Be the first to<br>join the circle</h2>
+                    <p class="waitlist-description">Sign up for early access and we'll let you know as soon as BookCircle is ready. No spam, ever.</p>
+                </div>
+                <div class="waitlist-card">
+                    <form id="signupForm" class="signup-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Join Waitlist</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="loader"></span>
+                            </span>
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+
+                    <p class="privacy-note">
+                        We respect your privacy. Unsubscribe at any time.
                     </p>
-                    
-                    <div class="features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
-                                    <circle cx="20" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M6 22C6 18.6863 8.68629 16 12 16C15.3137 16 18 18.6863 18 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M14 22C14 18.6863 16.6863 16 20 16C23.3137 16 26 18.6863 26 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-text">
-                                <h3>Connect with Friends</h3>
-                                <p>Follow friends and see their reading activity in real-time</p>
-                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Bug Report Section -->
+    <section class="section contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-label reveal">Say hello</div>
+            <h2 class="section-heading reveal">Get in touch</h2>
+            <p class="section-subheading reveal">Got a question, feedback, or found a bug? We'd love to hear from you.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.286 5.439z"/></svg>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 6L18.5 13H26L20 17.5L22.5 24.5L16 20L9.5 24.5L12 17.5L6 13H13.5L16 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                    <circle cx="24" cy="8" r="3" fill="currentColor"/>
-                                </svg>
-                            </div>
-                            <div class="feature-text">
-                                <h3>Recommend Books</h3>
-                                <p>Share your favorites and send personalized recommendations</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="8" y="4" width="16" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
-                                    <circle cx="24" cy="12" r="6" fill="currentColor" opacity="0.3"/>
-                                    <path d="M12 11H20M12 15H18M12 19H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="feature-text">
-                                <h3>See What They're Reading</h3>
-                                <p>Discover books through your friends' current reads and reviews</p>
-                            </div>
+                        <div>
+                            <h4>Email us</h4>
+                            <a href="mailto:byldforfun@gmail.com">byldforfun@gmail.com</a>
                         </div>
                     </div>
                 </div>
+                <div class="contact-card reveal">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactCategory">Category</label>
+                            <select id="contactCategory" name="contactCategory">
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Bug Report">Bug Report</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Feature Request">Feature Request</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="contactMessage" placeholder="Tell us what's on your mind..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="right-section">
-                    <div class="signup-card">
-                        <h3 class="card-title">Join the Waitlist</h3>
-                        <p class="card-subtitle">Be the first to know when we launch!</p>
-                        
-                        <form id="signupForm" class="signup-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    placeholder="Enter your name"
-                                    required
-                                >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    placeholder="Enter your email"
-                                    required
-                                >
-                            </div>
-                            
-                            <button type="submit" class="submit-btn" id="submitBtn">
-                                <span class="btn-text">Join Waitlist</span>
-                                <span class="btn-loader" style="display: none;">
-                                    <span class="loader"></span>
-                                </span>
-                            </button>
-                            
-                            <div class="form-message" id="formMessage"></div>
-                        </form>
-                        
-                        <p class="privacy-note">
-                            We respect your privacy. Unsubscribe at any time.
-                        </p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="24" height="24" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <circle cx="35" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                            <path d="M15 28 Q25 35, 35 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                            <path d="M18 18 L12 18 M32 18 L38 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="25" cy="42" r="4" fill="currentColor"/>
+                        </svg>
+                        <span>BookCircle</span>
+                    </div>
+                    <p class="footer-tagline">Reading is better together.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#waitlist">Join Waitlist</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="mailto:byldforfun@gmail.com">byldforfun@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="footer-email">byldforfun@gmail.com</p>
-                <div class="social-links">
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BookCircle. All rights reserved.</p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
