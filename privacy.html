@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BookCircle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            padding: 120px 24px 80px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .legal-page h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .legal-page .effective-date {
+            font-size: 0.95rem;
+            color: var(--text-tertiary);
+            margin-bottom: 40px;
+        }
+        .legal-page h2 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        .legal-page p,
+        .legal-page li {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .legal-page ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .legal-page li {
+            margin-bottom: 6px;
+        }
+        .legal-page a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .legal-page a:hover {
+            text-decoration: underline;
+        }
+        .legal-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            margin-bottom: 32px;
+            transition: color 0.2s;
+        }
+        .legal-back:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-icon">
+                    <img src="assets/logo.png" alt="Fireside logo" width="28" height="28">
+                </div>
+                <span>BookCircle</span>
+            </a>
+            <a href="index.html" class="nav-cta">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <a href="index.html" class="legal-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414L7.828 11z"/></svg>
+            Back to home
+        </a>
+
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: July 7, 2026</p>
+
+        <p>BookCircle ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application and website.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p><strong>Account information:</strong> When you create an account, we collect your email address, display name, username, and optional profile avatar.</p>
+        <p><strong>Library data:</strong> Books you add to your library, reading status, progress updates, notes, and ratings.</p>
+        <p><strong>Social data:</strong> Friend connections, Campfire memberships, group chat messages, page-pinned notes, poll votes, and Reader Matchmaker interactions.</p>
+        <p><strong>Waitlist information:</strong> If you join our waitlist, we collect your name and email address.</p>
+        <p><strong>Usage data:</strong> We may collect general usage information such as app interactions, device type, and operating system to improve our services.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Provide and maintain the BookCircle app and its features</li>
+            <li>Manage your account and personalize your experience</li>
+            <li>Enable social features such as Campfires, friend connections, and Reader Matchmaker</li>
+            <li>Send you updates about the app (if you opted in via the waitlist)</li>
+            <li>Improve our services based on usage patterns</li>
+            <li>Respond to your inquiries and support requests</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>BookCircle uses the following third-party services:</p>
+        <ul>
+            <li><strong>Supabase:</strong> For authentication, database, and backend services. Your data is stored securely on Supabase infrastructure.</li>
+            <li><strong>Google Books API:</strong> For book search and metadata. Search queries are sent to Google's servers to retrieve book information.</li>
+            <li><strong>Google Sheets (waitlist only):</strong> Waitlist signups are stored in a Google Sheet managed by our team.</li>
+            <li><strong>Expo / React Native:</strong> Our app framework. Expo may collect anonymous crash and performance data.</li>
+        </ul>
+        <p>We do not sell your personal information to any third parties.</p>
+
+        <h2>4. Data Storage and Security</h2>
+        <p>Your data is stored using Supabase with row-level security policies that ensure you can only access your own data. Authentication tokens are stored locally on your device using secure storage. We use industry-standard security measures to protect your information, but no method of electronic storage is 100% secure.</p>
+
+        <h2>5. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access the personal data we hold about you</li>
+            <li>Update or correct your account information</li>
+            <li>Delete your account and associated data</li>
+            <li>Unsubscribe from waitlist emails at any time</li>
+            <li>Request a copy of your data</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <a href="mailto:byldforfun@gmail.com">byldforfun@gmail.com</a>.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>BookCircle is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us and we will promptly delete it.</p>
+
+        <h2>7. Data Retention</h2>
+        <p>We retain your personal data for as long as your account is active or as needed to provide you our services. If you delete your account, we will delete your personal data within 30 days, except where we are required to retain it by law.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the effective date. Your continued use of BookCircle after changes are posted constitutes your acceptance of the updated policy.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p><a href="mailto:byldforfun@gmail.com">byldforfun@gmail.com</a></p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 BookCircle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
